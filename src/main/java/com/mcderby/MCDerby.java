@@ -1,5 +1,6 @@
 package com.mcderby;
 
+import com.mcderby.item.MCDerbyItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,7 +16,6 @@ import org.slf4j.Logger;
 
 // TODO: アイテム"鞭"の追加
 // TODO: エンティティ"馬"へのステータス追加
-// TODO:
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MCDerby.MOD_ID)
@@ -31,6 +31,8 @@ public class MCDerby {
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        MCDerbyItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
