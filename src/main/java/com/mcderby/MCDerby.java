@@ -1,6 +1,7 @@
 package com.mcderby;
 
 import com.mcderby.item.MCDerbyItems;
+import com.mcderby.item.MCDerbyTabs;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,8 +35,11 @@ public class MCDerby {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // アイテム用レジストリの呼び出し
+        // アイテムレジストリをイベントバスに登録
         MCDerbyItems.register(modEventBus);
+
+        // クリエイティブタブレジストリをイベントバスに登録
+        MCDerbyTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -50,10 +54,13 @@ public class MCDerby {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // 材料TABにアイテムを追加
+        /*
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(MCDerbyItems.SHORT_WHIP);
             event.accept(MCDerbyItems.LONG_WHIP);
         }
+        */
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
