@@ -32,6 +32,7 @@ public class MCDerby {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        // アイテム用レジストリの呼び出し
         MCDerbyItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
