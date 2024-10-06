@@ -12,6 +12,8 @@ public class MCDerbyItems {
 
     public static final RegistryObject<Item> SHORT_WHIP = ITEMS.register("short_whip", () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> LONG_WHIP = ITEMS.register("long_whip", () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
