@@ -1,6 +1,7 @@
 package com.mcderby.item;
 
 import com.mcderby.MCDerby;
+import com.mcderby.block.MCDerbyBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,8 +20,12 @@ public class MCDerbyTabs {
             .title(Component.translatable("creativetabs.mcderby_tab"))
             .icon(MCDerbyItems.SHORT_WHIP.get()::getDefaultInstance)
             .displayItems(((pParameters, pOutput) -> {
+                /* アイテム */
                 pOutput.accept(MCDerbyItems.SHORT_WHIP.get());
                 pOutput.accept(MCDerbyItems.LONG_WHIP.get());
+
+                /* ブロック */
+                pOutput.accept(MCDerbyBlocks.WESTERN_TURF.get());
             }))
             .build());
 

@@ -1,6 +1,10 @@
 {
+  "creativetabs.mcderby_tab": "MC Derby",
+
   "item.mcderby.short_whip": "Short Whip",
   "item.mcderby.long_whip": "Long Whip",
 
-  "creativetabs.mcderby_tab": "MC Derby"
+  "block.mcderby.western_turf": "Western Turf"
+
+
 }

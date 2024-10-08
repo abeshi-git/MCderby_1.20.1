@@ -1,5 +1,6 @@
 package com.mcderby;
 
+import com.mcderby.block.MCDerbyBlocks;
 import com.mcderby.item.MCDerbyItems;
 import com.mcderby.item.MCDerbyTabs;
 import com.mojang.logging.LogUtils;
@@ -40,6 +41,9 @@ public class MCDerby {
 
         // クリエイティブタブレジストリをイベントバスに登録
         MCDerbyTabs.register(modEventBus);
+
+        // ブロックをイベントバスに登録
+        MCDerbyBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
