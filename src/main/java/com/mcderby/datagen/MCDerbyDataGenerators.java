@@ -20,5 +20,8 @@ public class MCDerbyDataGenerators {
         generator.addProvider(event.includeClient(), new MCDerbyBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ENUSLanguageProvider(packOutput));
         generator.addProvider(event.includeClient(), new JAJPLanguageProvider(packOutput));
+
+        /* レシピ */
+        generator.addProvider(event.includeServer(), new MCDerbyRecipeProvider(packOutput));
     }
 }

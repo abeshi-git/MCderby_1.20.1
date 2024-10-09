@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mcderby:western_turf"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "mcderby:short_whip"
+  }
+}

@@ -9,8 +9,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.swing.plaf.synth.Region;
-
 public class MCDerbyTabs {
     // レジストリを作成
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MCDerby.MOD_ID);
